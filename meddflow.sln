@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1. meddflow.Runner", "1. meddflow.Runner\1. meddflow.Runner.csproj", "{E8782171-2C2B-43B1-A4CF-4BA2B097819B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. meddflow.Core", "2. meddflow.Core\2. meddflow.Core.csproj", "{400AA050-25A2-457C-A1EE-7ABE333D6AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. meddflow.Controls", "3. meddflow.Controls\3. meddflow.Controls.csproj", "{41DB1820-1439-4A5F-892F-D9EF2A2B5F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. meddflow.Steps", "4. meddflow.Steps\4. meddflow.Steps.csproj", "{A9C79FB9-EA1B-4E17-8A4A-448849967E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. meddflow.Features", "5. meddflow.Features\5. meddflow.Features.csproj", "{540F3C10-E171-4544-9936-8A0A6116E468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. meddflow.Tests", "6. meddflow.Tests\6. meddflow.Tests.csproj", "{1022270F-005F-4116-ADF3-CF3241B36D42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8782171-2C2B-43B1-A4CF-4BA2B097819B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8782171-2C2B-43B1-A4CF-4BA2B097819B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8782171-2C2B-43B1-A4CF-4BA2B097819B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8782171-2C2B-43B1-A4CF-4BA2B097819B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400AA050-25A2-457C-A1EE-7ABE333D6AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400AA050-25A2-457C-A1EE-7ABE333D6AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400AA050-25A2-457C-A1EE-7ABE333D6AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400AA050-25A2-457C-A1EE-7ABE333D6AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C79FB9-EA1B-4E17-8A4A-448849967E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C79FB9-EA1B-4E17-8A4A-448849967E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C79FB9-EA1B-4E17-8A4A-448849967E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C79FB9-EA1B-4E17-8A4A-448849967E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41DB1820-1439-4A5F-892F-D9EF2A2B5F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DB1820-1439-4A5F-892F-D9EF2A2B5F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DB1820-1439-4A5F-892F-D9EF2A2B5F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DB1820-1439-4A5F-892F-D9EF2A2B5F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1022270F-005F-4116-ADF3-CF3241B36D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1022270F-005F-4116-ADF3-CF3241B36D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1022270F-005F-4116-ADF3-CF3241B36D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1022270F-005F-4116-ADF3-CF3241B36D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540F3C10-E171-4544-9936-8A0A6116E468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540F3C10-E171-4544-9936-8A0A6116E468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540F3C10-E171-4544-9936-8A0A6116E468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540F3C10-E171-4544-9936-8A0A6116E468}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {150F59AB-CC9A-4BD8-A496-2465FD1058C2}
+	EndGlobalSection
+EndGlobal
