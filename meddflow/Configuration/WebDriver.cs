@@ -14,11 +14,11 @@ namespace meddflow
             switch (browser)
             {
                 case "firefox":
-                    webdriver = new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory);
+                    webdriver = new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\");
                     webdriver.Manage().Window.Maximize();
                     return webdriver;
                 case "chrome":
-                    webdriver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory);
+                    webdriver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\");
                     webdriver.Manage().Window.Maximize();
                     return webdriver;
                 default:
