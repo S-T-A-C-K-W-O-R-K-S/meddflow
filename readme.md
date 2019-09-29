@@ -1,2 +1,2 @@
 # meddflow
-Test Automation Framework For meddbase™ Running SpecFlow On .NET
+SpecFlow-Powered Test Automation Framework For meddbase™
