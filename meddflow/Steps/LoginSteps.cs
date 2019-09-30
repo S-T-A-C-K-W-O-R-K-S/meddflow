@@ -8,23 +8,22 @@ namespace meddflow
     [Binding]
     public class LoginSteps
     {
-        readonly IWebDriver driver = WebDriver.InitializeDriver("chrome");
+        readonly IWebDriver driver = WebDriver.InitializeDriver("firefox");
 
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
         {
-            string URL = "http://testing-ground.scraping.pro/login";
+            string URL = "https://system10.meddbase.com/em.aspx/?p=Login/Password&direct=true";
             driver.Navigate().GoToUrl(URL);
         }
 
         [When(@"I enter my username and password")]
         public void WhenIEnterMyUsernameAndPassword(Table table)
         {
-            IWebElement usernameInput = driver.FindElement(By.Id("usr"));
-            IWebElement passwordInput = driver.FindElement(By.Id("pwd"));
+            IWebElement usernameInput = driver.FindElement(By.CssSelector("div#LoginUsernameTextbox > div > input[name='MasterPage:UserName']"));
+            IWebElement passwordInput = driver.FindElement(By.CssSelector("div#LoginPasswordTextbox > div > input[name='MasterPage:_ctl16']"));
 
             var (username, password) = table.CreateInstance<(string username, string password)>();
-            // Working Effectively with SpecFlow Tables: https://joebuschmann.com/working-effectively-with-specflow-tables/
 
             usernameInput.SendKeys(username);
             passwordInput.SendKeys(password);
@@ -33,7 +32,7 @@ namespace meddflow
         [When(@"I click the login button")]
         public void WhenIClickTheLoginButton()
         {
-            IWebElement loginButton = driver.FindElement(By.CssSelector("input[type='submit']"));
+            IWebElement loginButton = driver.FindElement(By.CssSelector("div#LoginButtonContainer > input[type='submit']"));
 
             loginButton.Click();
         }
@@ -41,13 +40,9 @@ namespace meddflow
         [Then(@"I should be authenticated to the application home page")]
         public void ThenIShouldBeAuthenticatedToTheApplicationHomePage()
         {
-            IWebElement loggedIn = driver.FindElement(By.CssSelector("h3.error"));
-
-            Assert.AreEqual("ACCESS DENIED!", loggedIn.Text);
+            Assert.AreEqual("Start Page", driver.Title);
 
             WebDriver.TerminateDriver(driver);
         }
     }
 }
-
-// "ScenarioContext.StepIsPending()" can also be used to remove the warning that "ScenarioContext.Current.Pending()" generates

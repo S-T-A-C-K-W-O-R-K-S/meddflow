@@ -7,8 +7,7 @@
 Scenario: Logging in with valid credentials
   Given I am on the login page
   When I enter my username and password
-  | field | value |
-  | username | password |
-  | admin | 12345 |
+  | Username       | Password   |
+  | BRL.Automation | aut0mati0n |
   And I click the login button
   Then I should be authenticated to the application home page

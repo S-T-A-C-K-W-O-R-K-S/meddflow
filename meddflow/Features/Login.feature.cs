@@ -81,19 +81,16 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "field",
-                        "value"});
+                        "Username",
+                        "Password"});
             table1.AddRow(new string[] {
-                        "username",
-                        "password"});
-            table1.AddRow(new string[] {
-                        "admin",
-                        "12345"});
+                        "BRL.Automation",
+                        "aut0mati0n"});
 #line 9
   testRunner.When("I enter my username and password", ((string)(null)), table1, "When ");
-#line 13
+#line 12
   testRunner.And("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
+#line 13
   testRunner.Then("I should be authenticated to the application home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
