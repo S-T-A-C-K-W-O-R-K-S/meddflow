@@ -17,9 +17,9 @@ namespace meddflow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login", Description="  In order to access my account\r\n  As a user of the website\r\n  I should be able t" +
-        "o log in using my email and password", SourceFile="Features\\Login.feature", SourceLine=0)]
-    public partial class LoginFeature
+    [TechTalk.SpecRun.FeatureAttribute("Log Into My Account", Description="  IN ORDER TO ACCESS MY ACCOUNT\r\n  AS A USER OF THE WEBSITE\r\n  I SHOULD BE ABLE T" +
+        "O LOG IN WITH MY EMAIL AND PASSWORD", SourceFile="Features\\Login.feature", SourceLine=0)]
+    public partial class LogIntoMyAccountFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,8 +31,8 @@ namespace meddflow.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Login", "  In order to access my account\r\n  As a user of the website\r\n  I should be able t" +
-                    "o log in using my email and password", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Log Into My Account", "  IN ORDER TO ACCESS MY ACCOUNT\r\n  AS A USER OF THE WEBSITE\r\n  I SHOULD BE ABLE T" +
+                    "O LOG IN WITH MY EMAIL AND PASSWORD", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,17 +68,17 @@ namespace meddflow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Logging in with valid credentials", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Logging In With Valid Credentials", new string[] {
                 "authentication"}, SourceLine=6)]
         public virtual void LoggingInWithValidCredentials()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging in with valid credentials", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logging In With Valid Credentials", null, new string[] {
                         "authentication"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
-  testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given("I AM ON THE LOGIN PAGE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "EMAIL",
@@ -87,11 +87,11 @@ this.ScenarioInitialize(scenarioInfo);
                         "automation@runn.er",
                         "auto-M8"});
 #line 9
-  testRunner.When("I enter my email and password", ((string)(null)), table1, "When ");
+  testRunner.When("I ENTER MY EMAIL AND PASSWORD", ((string)(null)), table1, "When ");
 #line 12
-  testRunner.And("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I CLICK THE LOGIN BUTTON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
-  testRunner.Then("I should be authenticated to the application home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("I SHOULD BE AUTHENTICATED TO MY ACCOUNT", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
