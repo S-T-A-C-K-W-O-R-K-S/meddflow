@@ -18,7 +18,7 @@ namespace meddflow.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("Login", Description="  In order to access my account\r\n  As a user of the website\r\n  I should be able t" +
-        "o log in using my username and password", SourceFile="Features\\Login.feature", SourceLine=0)]
+        "o log in using my email and password", SourceFile="Features\\Login.feature", SourceLine=0)]
     public partial class LoginFeature
     {
         
@@ -32,7 +32,7 @@ namespace meddflow.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Login", "  In order to access my account\r\n  As a user of the website\r\n  I should be able t" +
-                    "o log in using my username and password", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "o log in using my email and password", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,13 +81,13 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.Given("I am on the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Username",
-                        "Password"});
+                        "EMAIL",
+                        "PASSWORD"});
             table1.AddRow(new string[] {
-                        "BRL.Automation",
-                        "aut0mati0n"});
+                        "automation@runn.er",
+                        "auto-M8"});
 #line 9
-  testRunner.When("I enter my username and password", ((string)(null)), table1, "When ");
+  testRunner.When("I enter my email and password", ((string)(null)), table1, "When ");
 #line 12
   testRunner.And("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
