@@ -8,7 +8,7 @@ namespace meddflow
     [Binding]
     public class LoginSteps
     {
-        readonly IWebDriver driver = WebDriver.InitializeDriver("chrome");
+        public IWebDriver driver = WebDriver.InitializeDriver("chrome");
 
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
@@ -41,7 +41,11 @@ namespace meddflow
         public void ThenIShouldBeAuthenticatedToTheApplicationHomePage()
         {
             Assert.AreEqual("Start Page", driver.Title);
+        }
 
+        [AfterScenario]
+        public void TearDown()
+        {
             WebDriver.TerminateDriver(driver);
         }
     }
