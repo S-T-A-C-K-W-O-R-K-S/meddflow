@@ -16,6 +16,8 @@ namespace meddflow
             string URL = "http://automationpractice.com/";
             driver.Navigate().GoToUrl(URL);
             driver.FindElement(By.CssSelector("a.login")).Click();
+
+            WebDriver.Wait(driver, 5000).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("form#login_form")));
         }
 
         [When(@"I enter my email and password")]
@@ -41,7 +43,7 @@ namespace meddflow
         [Then(@"I should be authenticated to the application home page")]
         public void ThenIShouldBeAuthenticatedToTheApplicationHomePage()
         {
-            Assert.AreEqual("Start Page", driver.Title);
+            Assert.AreEqual("MY ACCOUNT - MY STORE", driver.Title.ToUpper());
         }
 
         [AfterScenario]

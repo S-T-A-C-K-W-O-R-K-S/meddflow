@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Reflection;
 
@@ -29,6 +30,11 @@ namespace meddflow
                 default:
                     throw new Exception("IWebDriver Uninitialized");
             }
+        }
+
+        public static WebDriverWait Wait(IWebDriver driver, int milliseconds)
+        {
+            return new WebDriverWait(driver, TimeSpan.FromMilliseconds(milliseconds));
         }
 
         public static void TerminateDriver(IWebDriver webdriver)
