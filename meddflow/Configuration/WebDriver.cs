@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
+using System.Reflection;
 
 namespace meddflow
 {
@@ -14,12 +15,16 @@ namespace meddflow
             switch (browser)
             {
                 case "firefox":
-                    webdriver = new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\");
-                    webdriver.Manage().Window.Maximize();
+                    FirefoxOptions optionsGecko = new FirefoxOptions();
+                    optionsGecko.
+                        AddArguments("--window-size=1920,1080");
+                    webdriver = new FirefoxDriver(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), optionsGecko);
                     return webdriver;
                 case "chrome":
-                    webdriver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\");
-                    webdriver.Manage().Window.Maximize();
+                    ChromeOptions optionsChrome = new ChromeOptions();
+                    optionsChrome.
+                        AddArguments("--window-size=1920,1080");
+                    webdriver = new ChromeDriver(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), optionsChrome);
                     return webdriver;
                 default:
                     throw new Exception("IWebDriver Uninitialized");
