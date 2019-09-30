@@ -8,7 +8,7 @@ namespace meddflow
     [Binding]
     public class LoginSteps
     {
-        readonly IWebDriver driver = WebDriver.InitializeDriver("firefox");
+        readonly IWebDriver driver = WebDriver.InitializeDriver("chrome");
 
         [Given(@"I am on the login page")]
         public void GivenIAmOnTheLoginPage()
