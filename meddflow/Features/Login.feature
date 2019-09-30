@@ -1,13 +1,13 @@
-﻿Feature: Login
-  In order to access my account
-  As a user of the website
-  I should be able to log in using my email and password
+﻿Feature: Log Into My Account
+  IN ORDER TO ACCESS MY ACCOUNT
+  AS A USER OF THE WEBSITE
+  I SHOULD BE ABLE TO LOG IN WITH MY EMAIL AND PASSWORD
 
 @authentication
-Scenario: Logging in with valid credentials
-  Given I am on the login page
-  When I enter my email and password
+Scenario: Logging In With Valid Credentials
+  Given I AM ON THE LOGIN PAGE
+  When I ENTER MY EMAIL AND PASSWORD
   | EMAIL              | PASSWORD |
   | automation@runn.er | auto-M8  |
-  And I click the login button
-  Then I should be authenticated to the application home page
+  And I CLICK THE LOGIN BUTTON
+  Then I SHOULD BE AUTHENTICATED TO MY ACCOUNT

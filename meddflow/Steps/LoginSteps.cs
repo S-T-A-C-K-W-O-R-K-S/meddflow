@@ -10,7 +10,7 @@ namespace meddflow
     {
         public IWebDriver driver = WebDriver.InitializeDriver("chrome");
 
-        [Given(@"I am on the login page")]
+        [Given(@"I AM ON THE LOGIN PAGE")]
         public void GivenIAmOnTheLoginPage()
         {
             string URL = "http://automationpractice.com/";
@@ -20,7 +20,7 @@ namespace meddflow
             WebDriver.Wait(driver, 5000).Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("form#login_form")));
         }
 
-        [When(@"I enter my email and password")]
+        [When(@"I ENTER MY EMAIL AND PASSWORD")]
         public void WhenIEnterMyEmailAndPassword(Table table)
         {
             IWebElement emailInput = driver.FindElement(By.CssSelector("input#email"));
@@ -32,7 +32,7 @@ namespace meddflow
             passwordInput.SendKeys(password);
         }
 
-        [When(@"I click the login button")]
+        [When(@"I CLICK THE LOGIN BUTTON")]
         public void WhenIClickTheLoginButton()
         {
             IWebElement loginButton = driver.FindElement(By.CssSelector("button#SubmitLogin"));
@@ -40,8 +40,8 @@ namespace meddflow
             loginButton.Click();
         }
 
-        [Then(@"I should be authenticated to the application home page")]
-        public void ThenIShouldBeAuthenticatedToTheApplicationHomePage()
+        [Then(@"I SHOULD BE AUTHENTICATED TO MY ACCOUNT")]
+        public void ThenIShouldBeAuthenticatedToMyAccount()
         {
             Assert.AreEqual("MY ACCOUNT - MY STORE", driver.Title.ToUpper());
         }
