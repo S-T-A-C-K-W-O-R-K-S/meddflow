@@ -1,2 +1,2 @@
 # meddflow
-SpecFlow-Powered Test Automation Framework For meddbase™
+SpecFlow-Powered Test Automation Framework
